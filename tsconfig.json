@@ -20,7 +20,12 @@
     "resolveJsonModule": true,
     "typeRoots": [
       "node_modules/@types"
-    ]
+    ],
+    "paths": {
+      "@/context/*": ["./src/context/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/pages/*": ["./src/pages/*"]
+    }
   },
   "include": ["./src", "global.d.ts"],
   "compileOnSave": false

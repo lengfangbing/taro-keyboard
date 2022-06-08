@@ -1,6 +1,8 @@
+import Taro from '@tarojs/taro';
 import React, { useCallback } from "react";
 import { View, Text, Button, Image } from "@tarojs/components";
 import { useEnv, useNavigationBar, useModal, useToast } from "taro-hooks";
+import { AtButton } from 'taro-ui';
 import logo from "./hook.png";
 
 import './index.less'
@@ -41,6 +43,24 @@ const Index = () => {
       <Button className="button" onClick={handleModal}>
         使用Modal
       </Button>
+      <AtButton
+        onClick={() => {
+          Taro.navigateTo({
+            url: "/pages/test/jump/index"
+          });
+        }}
+      >
+        跳转jump页面
+      </AtButton>
+      <AtButton
+        onClick={() => {
+          Taro.navigateTo({
+            url: "/pages/test/context/index"
+          });
+        }}
+      >
+        跳转context页面
+      </AtButton>
     </View>
   );
 };

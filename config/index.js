@@ -1,3 +1,4 @@
+const path = require("path");
 const config = {
   projectName: "taro-keyboard",
   date: "2022-5-29",
@@ -15,6 +16,9 @@ const config = {
     patterns: [],
     options: {},
   },
+  alias: {
+    '@/context': path.resolve(__dirname, '..', 'src/context'),
+  },
   framework: "react",
   mini: {
     postcss: {
@@ -29,7 +33,7 @@ const config = {
         },
       },
       cssModules: {
-        enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
+        enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
         config: {
           namingPattern: "module", // 转换模式，取值为 global/module
           generateScopedName: "[name]__[local]___[hash:base64:5]",
@@ -40,6 +44,7 @@ const config = {
   h5: {
     publicPath: "/",
     staticDirectory: "static",
+    esnextModules: ['taro-ui'],
     postcss: {
       autoprefixer: {
         enable: true,
