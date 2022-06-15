@@ -22,11 +22,22 @@
       "node_modules/@types"
     ],
     "paths": {
-      "@/context/*": ["./src/context/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/pages/*": ["./src/pages/*"]
+      "@/context/*": [
+        "./src/context/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ]
     }
   },
-  "include": ["./src", "global.d.ts"],
+  "include": [
+    "./src",
+    "global.d.ts",
+    "src/cloud_function",
+    "wx.d.ts"
+  ],
   "compileOnSave": false
 }

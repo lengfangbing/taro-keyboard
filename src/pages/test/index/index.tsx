@@ -61,6 +61,15 @@ const Index = () => {
       >
         跳转context页面
       </AtButton>
+      <AtButton
+        onClick={() => {
+          Taro.navigateTo({
+            url: "/pages/test/cloud_function/index"
+          });
+        }}
+      >
+        跳转测试云函数页面
+      </AtButton>
     </View>
   );
 };
