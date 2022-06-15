@@ -5,4 +5,4 @@ deploy_versions/
 node_modules/
 .DS_Store
 database
-/src/cloud_function/**
+cloud_function
