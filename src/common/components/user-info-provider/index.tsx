@@ -5,13 +5,13 @@ import { userInfoAtom } from '../../store/atoms/user-info';
 import { UserInfo } from '../../types/user-info';
 import { callFunction } from '../../utils/call-function';
 
-type UserInfoProviderProps = {
+type UserInfoProviderProps = React.PropsWithChildren<{
 
-};
+}>;
 
-const UserInfoProvider: React.FC<UserInfoProviderProps> = ({
+function UserInfoProvider ({
   children
-}) => {
+}: UserInfoProviderProps) {
   const setUserInfo = useSetAtom(userInfoAtom);
 
   useEffect(() => {
