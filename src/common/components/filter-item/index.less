@@ -1,0 +1,93 @@
+.filterBooleanItem {
+  display: inline-block;
+  padding: 6px;
+  transition: color .2s linear 0s;
+  color: #3F536E;
+
+  & .active {
+    color: #6190e8;
+  }
+}
+
+.filterOrderItem {
+  display: flex;
+  padding: 6px;
+
+  & > .title {
+    transition: color .2s linear 0s;
+    color: #3F536E;
+
+    & .active {
+      color: #6190e8;
+    }
+  }
+
+  & > .icons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6px;
+
+    & > .icon {
+      margin-bottom: 3px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.filterLayout {
+  display: inline-block;
+
+  & > .button {
+    padding: 6px;
+    transition: all .2s linear 0s;
+    border: 1PX solid #c5d9e8;
+    background: #fff;
+    color: #000000;
+    border-radius: 3px;
+
+    & .active {
+      background: #6190e8;
+      border-color: #6190e8;
+      color: #fff;
+    }
+
+    &.open {
+      background: #6190e8;
+      border-color: #6190e8;
+      color: #fff;
+      opacity: .7;
+    }
+  }
+  & > .layout {
+    display: flex;
+    flex-direction: column;
+    & > .operation {
+      display: flex;
+
+      & > .cancel {
+        flex: 1;
+        border: none;
+        border-radius: 0;
+        background: #fff;
+        color: #000;
+      }
+
+      & > .confirm {
+        flex: 4;
+        border: none;
+        border-radius: 0;
+        background:#6190e8;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.listStickyFilter {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
